@@ -1,0 +1,30 @@
+{
+  "name": "social-artist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint *.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stazeworks/social-artist.git"
+  },
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/stazeworks/social-artist/issues"
+  },
+  "homepage": "https://github.com/stazeworks/social-artist#readme",
+  "dependencies": {
+    "bunyan": "^1.8.15",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^8.10.0",
+    "mocha": "^9.2.2"
+  }
+}

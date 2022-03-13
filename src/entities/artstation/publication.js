@@ -1,7 +1,8 @@
 'use strict';
 
-module.exports = async function publication(url) {
+module.exports = function publication(id, authorId) {
   return {
-    getUrl: () => url,
+    getId: () => id,
+    getAuthorId: () => authorId,
   };
 };
