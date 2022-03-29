@@ -2,10 +2,7 @@
 
 module.exports = function publicationRepository(repository) {
   return {
-    add: (publication) => repository.add(publication),
-    findById: (id) => repository.findById(id),
+    findAllOnLikedPage: (username) => repository.findAllOnLikedPage(username),
     findOnLatestPage: (username, count) => repository.findOnLatestPage(username, count),
-    removeById: (id) => repository.removeById(id),
-    countAll: () => repository.countAll()
   };
 };
