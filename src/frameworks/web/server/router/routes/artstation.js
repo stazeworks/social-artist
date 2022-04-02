@@ -28,6 +28,7 @@ module.exports = function artstationRouteSetup({
     
     return {
       '/artstation/likeLatestPublicationsAndFollowAuthor': (query) => artstation.postPublicationLikeAndFollowAuthor(query),
+      '/artstation/unlikeAll': (query) => artstation.unlikeAll(query),
       '/artstation/login': (query) => artstation.login(query)
     };
   };

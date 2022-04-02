@@ -8,7 +8,8 @@ module.exports = function artstationGetVotesApiSetup({
   return async function artstationGetVotesApiMethod(
     username,
     email,
-    user_id
+    user_id,
+    page,
   ) {
     const session = sessionRepository.findByUsername(username);
     user_id = session.artstation_user_id ? session.artstation_user_id : user_id;
@@ -17,7 +18,7 @@ module.exports = function artstationGetVotesApiSetup({
       method: 'GET',
       protocol: 'https:',
       hostname: 'www.artstation.com',
-      path: `/users/${username}/likes.json?page=1&user_id=${user_id}`,
+      path: `/users/${username}/likes.json?page=${page}&user_id=${user_id}`,
       headers: {
         'Content-Type': 'application/json',
         'Cookie': session ? session.cookies : undefined

@@ -1,5 +1,6 @@
 'use strict';
 
+
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
@@ -25,7 +26,8 @@ const sessionRepository = require('../../src/frameworks/repositories/sessionRepo
 const serializationService = require('../../src/frameworks/web/services/serializationService')({ logService });
 const webClient = require('../../src/frameworks/web/client')({ http, https, logService, serializationService });
 
-describe('Social Artist System: Artstation', () => {
+describe('Social Artist System: Artstation', function() {
+  this.timeout(10000);
   let loginArtstation;
   let postPublicationLikeAndFollowAuthorUseCase;
 
@@ -68,6 +70,4 @@ describe('Social Artist System: Artstation', () => {
       expect(result.followed[0].follow_id).to.be.a('number');
     });
   });
-
-
 });
